@@ -56,7 +56,7 @@ function Home() {
       else {
         console.log("unddddddddddd");
 
-        const { data } = await axios.post("http://localhost:4000/admin/checkadmin",{} ,{ withCredentials: true })
+        const { data } = await axios.post("http://localhost:4000/admin/checkadmin", {}, { withCredentials: true })
 
         console.log(data);
         if (!data.status) {
@@ -93,7 +93,7 @@ function Home() {
   }
   const logOut = () => {
     removeCookie("Ajwt")
-    
+
 
     navigate("/admin/login")
   }
@@ -129,7 +129,7 @@ function Home() {
 
                   <td><Link to='/admin/edit'><button onClick={() => {
                     dispatch(setUserDetails({
-                      id:user._id,
+                      id: user._id,
                       name: user.name,
                       email: user.email
                     }))
